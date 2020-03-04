@@ -7,6 +7,9 @@ cite:
   doi: https://doi.org/10.1016/bs.mch.2019.05.001
 authors: Deborah Schmidt
 documentation: README.md
+test_input: ./test_input.tif
+test_output: ./test_output.tif
+covers: [./thumbnail.png]
 tags: [denoising, unet2d, n2v]
 license: BSD 3
 format_version: 0.1.0
@@ -35,7 +38,7 @@ prediction:
   preprocess:
     spec: de.csbdresden.n2v.predict.N2VPrediction::preprocess
     kwargs: {mean: 41498.87, stdDev: 15007.021}
-  weights: {source: ./variables/variables}
+  weights: {source: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.0/n2v-sem-demo.zip}
   postprocess:
     spec: de.csbdresden.n2v.predict.N2VPrediction::postprocess
     kwargs: {mean: 41498.87, stdDev: 15007.021}
