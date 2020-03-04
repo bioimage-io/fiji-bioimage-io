@@ -1,4 +1,4 @@
-name: n2v-sem-demo
+name: N2V SEM Demo
 description: Demo model for denoising trained on a single SEM image with Noise2Void
 cite:
   text: |-
