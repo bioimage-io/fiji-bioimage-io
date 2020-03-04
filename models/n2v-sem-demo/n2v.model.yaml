@@ -1,0 +1,42 @@
+name: n2v-sem-demo
+description: Demo model for denoising trained on a single SEM image with Noise2Void
+cite:
+  text: |-
+    Buchholz, T. et al. - Content-aware image restoration for electron microscopy. 
+    Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)
+  doi: https://doi.org/10.1016/bs.mch.2019.05.001
+authors: Deborah Schmidt
+documentation: README.md
+tags: [denoising, unet2d, n2v]
+license: BSD 3
+format_version: 0.1.0
+language: java
+framework: tensorflow
+source: de.csbdresden.n2v.train.N2VTraining
+inputs:
+- name: raw
+  axes: byxc
+  data_type: float32
+  data_range: [-inf, inf]
+  shape:
+    min: [1, 4, 4, 1]
+    step: [1, 4, 4, 0]
+outputs:
+- name: denoised
+  axes: byxc
+  data_type: float32
+  data_range: [-inf, inf]
+  halo: [0, 32, 32, 0]
+  shape:
+    reference_input: raw
+    scale: [1, 1, 1, 1]
+    offset: [0, 0, 0, 0]
+prediction:
+  preprocess:
+    spec: de.csbdresden.n2v.predict.N2VPrediction::preprocess
+    kwargs: {mean: 41498.87, stdDev: 15007.021}
+  weights: {source: ./variables/variables}
+  postprocess:
+    spec: de.csbdresden.n2v.predict.N2VPrediction::postprocess
+    kwargs: {mean: 41498.87, stdDev: 15007.021}
+  dependencies: ./dependencies.yaml
