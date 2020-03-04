@@ -5,7 +5,7 @@ cite:
     Buchholz, T. et al. - Content-aware image restoration for electron microscopy. 
     Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)
   doi: https://doi.org/10.1016/bs.mch.2019.05.001
-authors: Deborah Schmidt
+authors: [Deborah Schmidt]
 documentation: README.md
 test_input: ./test_input.tif
 test_output: ./test_output.tif
