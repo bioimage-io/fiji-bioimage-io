@@ -15,7 +15,7 @@ license: BSD 3
 format_version: 0.1.0
 language: java
 framework: tensorflow
-source: de.csbdresden.n2v.train.N2VTraining
+source: de.csbdresden.n2v.train.N2VPrediction
 inputs:
 - name: raw
   axes: byxc
@@ -34,6 +34,10 @@ outputs:
     reference_input: raw
     scale: [1, 1, 1, 1]
     offset: [0, 0, 0, 0]
+training:
+  source: de.csbdresden.n2v.train.N2VTraining
+  kwargs: {batchDimLength: 180, batchSize: 64, trainDimensions: 2, neighborhoodRadius: 5, numEpochs: 100,
+    numStepsPerEpoch: 300, patchDimLength: 60, stepsFinished: 30000}
 prediction:
   preprocess:
     spec: de.csbdresden.n2v.predict.N2VPrediction::preprocess
