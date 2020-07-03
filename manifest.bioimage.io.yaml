@@ -1,0 +1,23 @@
+config:
+  id: fiji
+  name: Fiji
+  tags:
+    - fiji
+  logo: https://fiji.sc/site/logo.png
+  icon: https://fiji.sc/site/logo.png
+  splash_title: Fiji
+  splash_subtitle: Fiji is just ImageJ
+  splash_feature_list: []
+  explore_button_text: Start Exploring
+  background_image: static/img/zoo-background.svg
+  resource_types:
+    - model
+    - notebook
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+
+model:
+- id: N2VSEMDemo
+  source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/v0.1.4/models/n2v-sem-demo/n2v-sem-demo.model.yaml
+  links:
+    - Fiji Model Preview
+  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.4/n2v-sem-demo.zip
