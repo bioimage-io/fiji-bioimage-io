@@ -20,6 +20,7 @@ application:
 - id: Fiji
   name: Fiji
   description: Fiji is an image processing package — a "batteries-included" distribution of ImageJ, bundling many plugins which facilitate scientific image analysis.
+  source: https://fiji.sc/
   cite:
     text: "Schindelin, J., Arganda-Carreras, I., Frise, E. et al. Fiji: an open-source platform for biological-image analysis. Nat Methods 9, 676–682 (2012)."
     doi: https://doi.org/10.1038/nmeth.2019
