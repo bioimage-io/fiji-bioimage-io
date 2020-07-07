@@ -25,7 +25,7 @@ application:
     doi: https://doi.org/10.1038/nmeth.2019
   authors:
     - Fiji community
-  icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/assets/Fiji-icon.png
+  icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
   documentation: https://fiji.sc/
   git_repo: https://github.com/fiji/fiji
   tags:
