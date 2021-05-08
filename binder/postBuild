@@ -1,3 +1,4 @@
+set -e
 export JAVA_HOME=/srv/conda/envs/notebook
 wget https://downloads.imagej.net/fiji/archive/20201104-1356/fiji-linux64.zip
 unzip fiji-linux64.zip -d $HOME
@@ -6,8 +7,5 @@ mv $HOME/Fiji.app/jars/FilamentDetector-1.0.0.jar $HOME/Fiji.app/jars/FilamentDe
 # install csbdeep
 $HOME/Fiji.app/ImageJ-linux64 --update add-update-site Noise2Void https://sites.imagej.net/CSBDeep/
 $HOME/Fiji.app/ImageJ-linux64 --update update
-# setup display
-export DISPLAY=:1
-Xvfb $DISPLAY -screen 0 1024x768x16 &
 # test imagej
 python3 -c "import os;import imagej;ij = imagej.init(os.path.expanduser('~') + '/Fiji.app');print('pyimagej initialized.')"
