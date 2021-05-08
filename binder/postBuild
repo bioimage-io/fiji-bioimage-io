@@ -8,7 +8,7 @@ mv $HOME/Fiji.app/jars/FilamentDetector-1.0.0.jar $HOME/Fiji.app/jars/FilamentDe
 export DISPLAY=:1
 Xvfb $DISPLAY -screen 0 1024x768x16 &
 # install csbdeep
-$HOME/Fiji.app/ImageJ-linux64 --update add-update-site Noise2Void https://sites.imagej.net/CSBDeep/
-$HOME/Fiji.app/ImageJ-linux64 --update update
+$HOME/Fiji.app/ImageJ-linux64 --ij2 --headless --update add-update-site Noise2Void https://sites.imagej.net/CSBDeep/
+$HOME/Fiji.app/ImageJ-linux64 --ij2 --headless --update update
 # test imagej
 python3 -c "import os;import imagej;ij = imagej.init(os.path.expanduser('~') + '/Fiji.app');print('pyimagej initialized.')"
