@@ -1,5 +1,5 @@
 set -e
-export JAVA_HOME=/srv/conda/envs/notebook
+export JAVA_HOME=/srv/conda/envs/notebook/jre
 wget https://downloads.imagej.net/fiji/archive/20201104-1356/fiji-linux64.zip
 unzip fiji-linux64.zip -d $HOME
 # fix FilamentDetector issue
