@@ -1,0 +1,36 @@
+name: imagej
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.7
+  - pip
+  - numpy
+  - scipy
+  - imglyb
+  - ipywidgets
+  - jpype1
+  - jupyter_contrib_nbextensions
+  - matplotlib-base
+  - notebook
+  - openjdk=8
+  - scikit-image
+  - scyjava
+  - xarray
+  - matplotlib=3.2
+  - pyvirtualdisplay=0.2
+  - pyimagej=1.0.0
+  - pip:
+    - scikit-image
+    - scikit-learn
+    - pandas
+    - pillow
+    - requests
+    - imjoy
+    - imjoy-rpc>=0.2.5
+    - imjoy-jupyter-extension
+    - imjoy-elfinder
+    - jupyter-server-proxy
+    
+
+
