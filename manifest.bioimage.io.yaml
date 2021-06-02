@@ -28,7 +28,8 @@ application:
     - Fiji community
   icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
   documentation: https://fiji.sc/
-  git_repo: https://github.com/fiji/fiji
+  git_repo: https://github.com/fiji/fiji,
+  passive: true
   tags:
     - fiji
 
