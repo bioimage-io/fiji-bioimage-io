@@ -1,49 +1,49 @@
 name: N2V SEM Demo
 description: Demo model for denoising trained on a single SEM image with Noise2Void
 cite:
-  text: |-
-    Buchholz, T. et al. - Content-aware image restoration for electron microscopy. 
-    Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)
-  doi: https://doi.org/10.1016/bs.mch.2019.05.001
-authors: [Deborah Schmidt]
+  - text: "Buchholz, T. et al. - Content-aware image restoration for electron microscopy. Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)"
+    doi: https://doi.org/10.1016/bs.mch.2019.05.001
+authors: [ Deborah Schmidt ]
 documentation: README.md
-test_input: ./test_input.tif
-test_output: ./test_output.tif
-covers: [./thumbnail.png]
-tags: [denoising, unet2d, n2v]
+test_inputs: [ test_input.tif ]
+test_outputs: [ test_output.tif ]
+covers: [ thumbnail.png ]
+tags: [ denoising, unet2d, n2v ]
 license: BSD 3
-format_version: 0.1.0
+format_version: 0.3.1
 language: java
 framework: tensorflow
-source: de.csbdresden.n2v.train.N2VPrediction
+timestamp: 2021-06-03T15:34:19.685956+02:00
 inputs:
-- name: raw
-  axes: byxc
-  data_type: float32
-  data_range: [-inf, inf]
-  shape:
-    min: [1, 4, 4, 1]
-    step: [1, 4, 4, 0]
+  - name: input
+    axes: byxc
+    data_type: float32
+    data_range: [ -inf, inf ]
+    shape:
+      min: [ 1, 4, 4, 1 ]
+      step: [ 0, 4, 4, 0 ]
+    preprocessing:
+      - name: zero_mean_unit_variance
+        kwargs: { mode: fixed, axes: ycx, mean: 41498.87, std: 15007.021 }
 outputs:
-- name: denoised
-  axes: byxc
-  data_type: float32
-  data_range: [-inf, inf]
-  halo: [0, 32, 32, 0]
-  shape:
-    reference_input: raw
-    scale: [1, 1, 1, 1]
-    offset: [0, 0, 0, 0]
-training:
-  source: de.csbdresden.n2v.train.N2VTraining
-  kwargs: {batchDimLength: 180, batchSize: 64, trainDimensions: 2, neighborhoodRadius: 5, numEpochs: 100,
-    numStepsPerEpoch: 300, patchDimLength: 60, stepsFinished: 30000}
-prediction:
-  preprocess:
-    spec: de.csbdresden.n2v.predict.N2VPrediction::preprocess
-    kwargs: {mean: 41498.87, stdDev: 15007.021}
-  weights: {source: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.0/n2v-sem-demo.zip}
-  postprocess:
-    spec: de.csbdresden.n2v.predict.N2VPrediction::postprocess
-    kwargs: {mean: 41498.87, stdDev: 15007.021}
-  dependencies: ./dependencies.yaml
+  - name: denoised
+    axes: byxc
+    data_type: float32
+    data_range: [ -inf, inf ]
+    halo: [ 0, 32, 32, 0 ]
+    shape:
+      reference_input: input
+      scale: [ 1, 1, 1, 1 ]
+      offset: [ 0, 0, 0, 0 ]
+    postprocessing:
+      - name: scale_linear
+        kwargs: { gain: 41498.87, offset: 15007.021, axes: ycx }
+weights:
+  tensorflow_saved_model_bundle:
+    source: "https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.4/n2v-sem-demo.zip"
+    sha256: c55ab5528ec0dd8b3e00062df155ba00aef4971d7eacc3ed2d41db1f25917994
+    authors: [ Deborah Schmidt ]
+    tensorflow_version: 1.13.1
+config:
+  fiji: { batchDimLength: 180, batchSize: 64, trainDimensions: 2, neighborhoodRadius: 5, numEpochs: 100,
+          numStepsPerEpoch: 300, patchDimLength: 60, stepsFinished: 30000 }
