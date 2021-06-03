@@ -40,7 +40,7 @@ outputs:
         kwargs: { gain: 41498.87, offset: 15007.021, axes: ycx }
 weights:
   tensorflow_saved_model_bundle:
-    source: "https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.4/n2v-sem-demo.zip"
+    source: "https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.3.1/n2v-sem-demo_savedmodelbundle.zip"
     sha256: c55ab5528ec0dd8b3e00062df155ba00aef4971d7eacc3ed2d41db1f25917994
     authors: [ Deborah Schmidt ]
     tensorflow_version: 1.13.1
