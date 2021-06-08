@@ -35,7 +35,7 @@ application:
 
 model:
 - id: N2VSEMDemo
-  source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/v0.1.4/models/n2v-sem-demo/n2v-sem-demo.model.yaml
+  source: https://github.com/bioimage-io/fiji-bioimage-io/blob/f5ad3ed8f5bdd583c9dd4f1daacc9a6a5afb4bbd/models/n2v-sem-demo/n2v-sem-demo.model.yaml
   links:
     - Fiji
-  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.1.4/n2v-sem-demo.zip
+  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
