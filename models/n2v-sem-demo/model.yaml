@@ -3,13 +3,15 @@ description: Demo model for denoising trained on a single SEM image with Noise2V
 cite:
   - text: "Buchholz, T. et al. - Content-aware image restoration for electron microscopy. Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)"
     doi: https://doi.org/10.1016/bs.mch.2019.05.001
-authors: [ Deborah Schmidt ]
+authors:
+  - name: Deborah Schmidt
+    affiliation: MDC Berlin
 documentation: README.md
 test_inputs: [ test_input.tif ]
 test_outputs: [ test_output.tif ]
 covers: [ thumbnail.png ]
 tags: [ denoising, unet2d, n2v ]
-license: BSD 3
+license: BSD-3-Clause
 format_version: 0.3.1
 language: java
 framework: tensorflow
