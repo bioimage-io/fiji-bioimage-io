@@ -1,4 +1,14 @@
-format_version: 0.2.0
+format_version: 0.2.2
+type: collection
+name: Fiji Collection
+tags: [fiji, bioimage.io]
+description: "Resources for BioImgage.IO curated by the fiji community."
+authors: []
+documentation: ""
+maintainers: []
+
+cite: []
+
 config:
   id: fiji
   name: Fiji
@@ -16,8 +26,9 @@ config:
     - notebook
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
-application:
+collection:
 - id: Fiji
+  type: application
   name: Fiji
   description: Fiji is an image processing package — a "batteries-included" distribution of ImageJ, bundling many plugins which facilitate scientific image analysis.
   source: https://fiji.sc/
@@ -34,8 +45,8 @@ application:
     - fiji
     - software
 
-model:
 - id: N2VSEMDemo
+  type: model
   source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
   links:
     - Fiji
