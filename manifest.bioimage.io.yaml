@@ -42,7 +42,7 @@ collection:
 
 - id: N2VSEMDemo
   type: model
-  source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
+  rdf_source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
   links:
     - Fiji
   download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
