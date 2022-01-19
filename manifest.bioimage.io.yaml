@@ -3,11 +3,6 @@ type: collection
 name: Fiji Collection
 tags: [fiji, bioimage.io]
 description: "Resources for BioImgage.IO curated by the fiji community."
-authors: []
-documentation: ""
-maintainers: []
-
-cite: []
 
 config:
   id: fiji
