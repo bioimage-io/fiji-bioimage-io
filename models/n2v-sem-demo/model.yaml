@@ -9,7 +9,8 @@ authors:
 documentation: README.md
 test_inputs: [ test_input.tif ]
 test_outputs: [ test_output.tif ]
-covers: [ https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png ]
+covers:
+  - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png
 tags: [ denoising, unet2d, n2v ]
 license: BSD-3-Clause
 format_version: 0.3.2
