@@ -1,4 +1,5 @@
 name: N2V SEM Demo
+type: model
 description: Demo model for denoising trained on a single SEM image with Noise2Void
 cite:
   - text: "Buchholz, T. et al. - Content-aware image restoration for electron microscopy. Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)"
