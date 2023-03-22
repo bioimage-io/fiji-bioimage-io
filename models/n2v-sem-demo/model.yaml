@@ -24,7 +24,7 @@ inputs:
     data_type: float32
     data_range: [ -inf, inf ]
     shape:
-      min: [ 1, 4, 4, 1 ]
+      min: [ 1, 68, 68, 1 ]
       step: [ 0, 4, 4, 0 ]
     preprocessing:
       - name: zero_mean_unit_variance
