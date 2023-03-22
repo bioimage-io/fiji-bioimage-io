@@ -46,4 +46,5 @@ collection:
   rdf_source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
   links:
     - Fiji
-  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip  # outdated version 0.1.0, todo: remove
+  version: '0.1.1'
