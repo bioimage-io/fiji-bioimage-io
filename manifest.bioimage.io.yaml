@@ -20,6 +20,14 @@ config:
     - model
     - notebook
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  docs: https://imagej.net/software/fiji/
+  contact:
+    - name: Florian Jug
+      email: florian.jug@fht.org
+      github: fjug
+      affiliation:
+        - name: HT
+          url: https://humantechnopole.it/en/
 
 collection:
 - id: Fiji
