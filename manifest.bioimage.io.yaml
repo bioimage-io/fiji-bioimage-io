@@ -47,11 +47,3 @@ collection:
   tags:
     - fiji
     - software
-
-- id: N2VSEMDemo
-  type: model
-  name: N2V SEM Demo
-  rdf_source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
-  links:
-    - Fiji
-  version: '0.1.2'
